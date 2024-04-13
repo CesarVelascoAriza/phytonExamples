@@ -1,7 +1,12 @@
 
 from MiClase import MiClase
-
+from Constantes import *
+from ConstantesClase import ContantesClase
 def main():
+    #Constantes
+    print (MI_CONSTANTE)
+
+    print(ContantesClase.PI)
     #variable estatica de mi clase 
     print (MiClase.variable)
     #metodo estatico 

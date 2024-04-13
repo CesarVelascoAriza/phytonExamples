@@ -1,0 +1,1 @@
+MI_CONSTANTE = 'mi constantes'

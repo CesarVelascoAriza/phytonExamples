@@ -7,5 +7,7 @@ def main():
     print(persona)
     print(persona2)
     print(persona3)
+    
+    
 if __name__=="__main__":
     main()

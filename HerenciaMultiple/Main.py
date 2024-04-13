@@ -12,7 +12,7 @@ def main():
     print(Cuadrado.mro())
 
     rectangulo = Rectangulo(3,8,'verde')
-    print(f'Area del Rectangulo {rectangulo.clacular_area()}')
+    print(f'Area del Rectangulo {rectangulo.calcular_area()}')
     print(rectangulo)
 
     print('fin de los objetos'.center(50,'*'))

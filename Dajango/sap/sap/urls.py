@@ -17,7 +17,10 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
+from webApp.views import webApp
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    #path("webApp/", webApp),
+    path("", webApp),
 ]

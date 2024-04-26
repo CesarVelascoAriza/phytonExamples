@@ -17,10 +17,11 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
-from webApp.views import webApp
+from webApp.views import webApp,despedida
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     #path("webApp/", webApp),
     path("", webApp),
+    path("despedida/", despedida),
 ]

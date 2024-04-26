@@ -5,3 +5,5 @@ from django.http import HttpResponse
 
 def webApp(request):
     return HttpResponse('Hola mundo desde djago')
+def despedida(req):
+    return HttpResponse("")

@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "webApp"
+    "webApp",
+    "personas"
 ]
 
 MIDDLEWARE = [
@@ -80,6 +81,19 @@ DATABASES = {
         "NAME": BASE_DIR / "db.sqlite3",
     }
 }
+
+'''
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgressql_psycopg2",
+        "NAME": "sap_db",
+        "USER": "postregres",
+        "PASSWORD": "ADMIN",
+        "HOST": "LOCALHOST",
+        "PORT": '5432'
+    }
+}
+'''
 
 
 # Password validation

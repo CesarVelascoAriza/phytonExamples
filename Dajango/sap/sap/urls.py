@@ -17,11 +17,16 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
+from personas.views import detallePersonas,nuevaPersona,editarPersona,eliminarPersona
 from webApp.views import webApp,despedida
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     #path("webApp/", webApp),
-    path("", webApp),
+    path("", webApp,name= 'index'),
     path("despedida/", despedida),
+    path('detalle_persona/<int:id>',detallePersonas),
+    path('nueva_persona',nuevaPersona),
+    path('editar_persona/<int:id>',editarPersona),
+    path('eliminar_persona/<int:id>',eliminarPersona),
 ]

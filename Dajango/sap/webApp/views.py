@@ -5,7 +5,9 @@ from personas.models import Persona
 
 def webApp(request):
     personas_var_count = Persona.objects.count()
-
-    return render(request, 'index.html',{'count':personas_var_count})
+    #listPersonas = Persona.objects.all()
+    #listPersonas = Persona.objects.order_by('id','nombre') ascendente
+    listPersonas = Persona.objects.order_by('-id')#decendente
+    return render(request, 'index.html',{'count':personas_var_count,'personas':listPersonas})
 def despedida(req):
     return HttpResponse("")

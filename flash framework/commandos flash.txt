@@ -1,0 +1,14 @@
+commandos flash
+
+python -m pip install flask
+
+flask run
+
+set FLASK_APP = app.py
+
+set FLAS_ENV = development
+
+
+export FLAS_ENV = development
+
+

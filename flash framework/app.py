@@ -1,6 +1,6 @@
-from flask import Flask,request,render_template,url_for
-from werkzeug.utils import redirect
+from flask import Flask, request, render_template, url_for, jsonify, session
 from werkzeug.exceptions import abort
+from werkzeug.utils import redirect
 
 app = Flask(__name__)
 
@@ -11,7 +11,8 @@ app.secret_key = 'my_clave_secreta'
 @app.route('/')
 def inicio():
     if 'username' in session:
-        return f'el usuario ya ha hecho login{session['username']}'
+       # return f'el usuario ya ha hecho login '
+        return f'el usuario ya ha hecho login {session["username"]}'
     #app.logger.debug('Mensaje a nivel debug')
     app.logger.info(f'Entramos al path => {request.path}')
     #app.logger.warn('Mensaje de nivel warning')
@@ -19,7 +20,7 @@ def inicio():
     app.logger.info('no ha hecho login ')
     return 'no ha hecho login'
 
-@app.route('/login',method=['GET','POST'])
+@app.route('/login',methods=['GET','POST'])
 def login():
     if request.method == 'POST':
         #omitimo las validaciones de usuario y password
